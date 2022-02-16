@@ -1,0 +1,14 @@
+function uniqueString(string){
+    for (let i=0; i<=string.length-2; i++){
+        for (let j=string.length-i; j<=string.length; j++){
+            let a = string[i];
+            let b = string[j];
+            if (a == b){
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+return uniqueString("bayu");

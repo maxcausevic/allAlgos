@@ -1,0 +1,27 @@
+// null       ""
+// undefined  ""
+// ""         ""
+// A          A
+// AAA        3A
+// ABB        A2B
+// ABBCCBA    A2B2CBA
+// AAABBCCBA  3A2B2CBA
+export const decompress = expression => {
+    if (!expression) {
+      return "";
+    }
+  
+    let result = "";
+    let multiplier = 1;
+  
+    for (let i = 0; i < expression.length; i++) {
+      const value = expression[i];
+  
+      if (value >= "0" && value <= "9") {
+        multiplier = value - "0";
+      } else if (value >= "A" && value <= "Z") {
+        result += value.repeat(multiplier);
+      }
+    }
+    return result;
+  };
