@@ -1,3 +1,4 @@
+
 var twoSum = function(nums, target) {
     const previousValues = {}
     for (i=0; i <= nums.length; i++){
@@ -11,3 +12,6 @@ var twoSum = function(nums, target) {
         }
     }
 };
+
+console.log(twoSum([2,7,11,12], 9))
+
